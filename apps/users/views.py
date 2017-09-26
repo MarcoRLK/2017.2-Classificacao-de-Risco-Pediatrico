@@ -116,7 +116,7 @@ class RegistrationPatientView(CreateView):
     success_url = reverse_lazy('users:home_receptionist')
 
 
-def show_pacient_view(request, cpf):
+def show_patient_view(request, cpf):
     patient = Patient.objects.filter(cpf=cpf)[0]
     return render(request, 'users/showPatient.html', {'patient': patient})
 
